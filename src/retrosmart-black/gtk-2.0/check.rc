@@ -1,0 +1,47 @@
+########################################################################
+# Check boxes
+########################################################################
+
+style "check_box"
+{
+### Check box ###
+	engine "pixmap" 
+	{
+		image 
+		{
+			function = CHECK
+			shadow = OUT
+			overlay_file = "assets/check.svg"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = CHECK
+			shadow = IN
+			overlay_file = "assets/check-pressed.svg"
+			overlay_stretch = FALSE
+		}
+		
+		image 
+		{
+			function = OPTION
+			shadow = OUT
+			overlay_file = "assets/radio.svg"
+			overlay_stretch = FALSE
+		}
+
+		image 
+		{
+			function = OPTION
+			shadow = IN
+			overlay_file = "assets/radio-pressed.svg"
+			overlay_stretch = FALSE
+		}
+	}
+}
+
+class "GtkCheckButton*" style "check_box"
+class "GtkCheckMenuItem*" style "check_box"  # Cambia todos los check del los menús.
+class "GtkTreeView*" style "check_box"
+

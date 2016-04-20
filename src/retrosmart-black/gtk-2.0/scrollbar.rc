@@ -1,0 +1,226 @@
+########################################################################
+# Scrollbar
+########################################################################
+
+style "scrollbar" 
+{
+	GtkRange::slider-width = 16
+   	GtkRange::stepper-size = 17
+   	
+	GtkCheckButtonClass::indicator-size = 13
+   	GtkRadioButtonClass::indicator-size = 13
+	
+	engine "pixmap" 
+	{
+### Trough ###
+		image 
+		{
+            function = BOX
+            detail = "trough"
+            file = "assets/trough-v.svg"
+            border = {2, 2, 2, 2}
+            stretch = TRUE
+            orientation = VERTICAL
+        }
+        
+        image 
+		{
+            function = BOX
+            detail = "trough"
+            file = "assets/trough-h.svg"
+            border = {2, 2, 2, 2}
+            stretch = TRUE
+            orientation = HORIZONTAL
+        }
+
+### Scrollbar ###
+        image 
+		{
+			function = SLIDER
+			file = "assets/scrollbar_horizontal.svg"
+			border = {3, 3, 3, 3}
+			stretch = TRUE
+			orientation = HORIZONTAL
+		}
+	
+        image 
+		{
+            function = SLIDER
+            file = "assets/scrollbar_vertical.svg"
+            border = {3, 3, 3, 3}
+            stretch = TRUE
+            orientation = VERTICAL
+        }
+        
+### Arrow UP ###
+
+## Normal
+		image 
+		{
+            function = ARROW
+            state = NORMAL
+            overlay_file = "assets/arrow_up.svg"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        
+## Prelight
+		image 
+		{
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "assets/arrow_up.svg"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        
+## Insensitive
+		image 
+		{
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "assets/arrow_up.svg"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+
+## Active
+        image 
+		{
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "assets/arrow_up_clicked.svg"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        
+### Arrow DOWN ###       
+        
+## Normal
+		image 
+		{
+            function = ARROW
+            state = NORMAL
+            overlay_file = "assets/arrow_down.svg"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        
+## Prelight
+		image 
+		{
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "assets/arrow_down.svg"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        
+## Insensitive
+		image 
+		{
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "assets/arrow_down.svg"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+
+## Active
+        image 
+		{
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "assets/arrow_down_clicked.svg"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+
+### Arrow LEFT ###     
+
+## Normal
+		image 
+		{
+            function = ARROW
+            state = NORMAL
+            overlay_file = "assets/arrow_left.svg"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        
+## Prelight
+		image 
+		{
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "assets/arrow_left.svg"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        
+## Insensitive
+		image 
+		{
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "assets/arrow_left.svg"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+
+## Active
+        image 
+		{
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "assets/arrow_left_clicked.svg"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+
+### Arrow RIGHT ###       
+
+## Normal
+		image 
+		{
+            function = ARROW
+            state = NORMAL
+            overlay_file = "assets/arrow_right.svg"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        
+## Prelight
+		image 
+		{
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "assets/arrow_right.svg"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        
+## Insensitive
+		image 
+		{
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "assets/arrow_right.svg"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+
+## Active
+        image 
+		{
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "assets/arrow_right_clicked.svg"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }    
+    }
+}
+
+class "GtkScrollbar*" style "scrollbar"
+

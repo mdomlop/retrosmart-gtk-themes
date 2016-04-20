@@ -1,0 +1,180 @@
+
+style "combobox_entry"
+{
+	xthickness	= 2
+	ythickness   	= 4
+
+	engine "pixmap"
+	{
+        # LTR version
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/combo-entry-border-bg.png"
+		border			= { 4, 4, 4, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = INSENSITIVE
+		shadow			= IN
+		file			= "Entry/combo-entry-border-disabled-bg.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-border-active-bg.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+        }
+
+        # RTL version
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = NORMAL
+		shadow			= IN
+		file			= "Entry/combo-entry-border-rtl-bg.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= SHADOW
+		detail			= "entry"
+                state                   = INSENSITIVE
+		shadow			= IN
+		file			= "Entry/combo-entry-border-disabled-rtl-bg.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+        image
+        {
+		function		= SHADOW
+		detail			= "entry"
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-border-active-rtl-bg.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+        }
+    }
+}
+
+style "combobox_entry_button"
+{
+        fg[ACTIVE] = @text_color
+
+	engine "pixmap"
+	{
+        # LTR version
+	image
+	{
+		function		= BOX
+                state                   = NORMAL
+		file			= "Entry/combo-entry-button.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= BOX
+                state                   = PRELIGHT
+		file			= "Entry/combo-entry-button.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+	image
+	{
+		function		= BOX
+                state                   = INSENSITIVE
+		file			= "Entry/combo-entry-button-disabled.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+	}
+        image
+        {
+		function		= BOX
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-button-active.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = LTR
+        }
+
+        # RTL version
+	image
+	{
+		function		= BOX
+                state                   = NORMAL
+		file			= "Entry/combo-entry-button-rtl.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= BOX
+                state                   = PRELIGHT
+		file			= "Entry/combo-entry-button-rtl.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+	image
+	{
+		function		= BOX
+                state                   = INSENSITIVE
+		file			= "Entry/combo-entry-button-disabled-rtl.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+	}
+        image
+        {
+		function		= BOX
+                state                   = ACTIVE
+		file			= "Entry/combo-entry-button-active-rtl.png"
+		border			= { 4, 4, 5, 4 }
+		stretch			= TRUE
+                direction               = RTL
+        }
+    }
+}
+
+
+style "combobox"
+{
+  xthickness = 0
+  ythickness = 0
+}
+
+style "combobox_button"
+{
+  xthickness = 2
+  ythickness = 2
+}
+
+widget_class "*<GtkComboBox>"                   style "combobox"
+widget_class "*<GtkComboBox>*<GtkButton>"       style "combobox_button"
+widget_class "*<GtkComboBoxEntry>*<GtkEntry>"   style "combobox_entry"
+widget_class "*<GtkComboBoxEntry>*<GtkButton>"  style "combobox_entry_button"
+widget_class "*<GtkNotebook>*<GtkEventBox>*<GtkComboBoxEntry>*<GtkEntry>" style "combobox_entry"

@@ -1,0 +1,28 @@
+style "chrome"
+{   
+	ChromeGtkFrame::frame-color = @inactive
+	ChromeGtkFrame::inactive-frame-color = shade(0.75, @inactive)
+
+	ChromeGtkFrame::frame-gradient-size = 125
+	ChromeGtkFrame::frame-gradient-color = @light
+
+	ChromeGtkFrame::incognito-frame-color = @inactive
+	ChromeGtkFrame::incognito-inactive-frame-color = shade(0.75, @inactive)
+
+	ChromeGtkFrame::incognito-frame-gradient-color = @light
+
+	ChromeGtkFrame::scrollbar-trough-color = darker (@inactive)
+	ChromeGtkFrame::scrollbar-slider-prelight-color = @active
+	ChromeGtkFrame::scrollbar-slider-normal-color = @active
+	bg[SELECTED] = @light
+}
+
+style "chrome_button"
+{
+        bg[SELECTED] = @dark
+}
+
+
+class "ChromeGtkFrame" style "chrome"
+widget_class "*Chrom*Button*" style "test"
+widget_class "*<GtkCustomMenu>*<GtkCustomMenuItem>*" style "chrome"

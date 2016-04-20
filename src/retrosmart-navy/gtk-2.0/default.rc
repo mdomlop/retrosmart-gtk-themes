@@ -1,0 +1,35 @@
+
+style "default"
+{
+
+
+  fg[NORMAL]        = @dark  # Texto normal.
+  fg[PRELIGHT]      = @light
+  fg[ACTIVE]        = @dark # pestañas del fondo
+  fg[SELECTED]      = @active
+  fg[INSENSITIVE]   = @inactive
+
+  bg[NORMAL]        = @box
+  bg[PRELIGHT]      = @active
+  bg[ACTIVE]        = @inactive  # Fondo de los widgets.
+  bg[SELECTED]      = @box  # Widget notificación mpd.
+  bg[INSENSITIVE]   = @box
+
+  base[NORMAL]      = @light # Fondo de iconos (Gestor de archivos)
+  base[PRELIGHT]    = @light # Fondo chek prelight
+  base[ACTIVE]      = @inactive # Selección en el fondo.
+  #base[SELECTED]    = lighter(@active) # Selección (Coloreado)
+  base[SELECTED]    = darker(@inactive) # Selección
+  base[INSENSITIVE] = @box
+
+  text[NORMAL]      = @dark
+  text[PRELIGHT]    = @light  # Problema gmpc y thunar
+  text[ACTIVE]      = @light
+  text[SELECTED]    = @light
+  text[INSENSITIVE] = @inactive
+
+}
+
+class "*" style "default"
+widget "*" style "default"
+widget_class "*" style "default"

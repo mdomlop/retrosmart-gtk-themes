@@ -1,0 +1,26 @@
+# amica gtk theme
+
+gtk-color-scheme = "light:#FFFFFF\ndark:#000000\nactive:#000000\ninactive:#808080\nbox:#c0c0c0\nedit:#ffffe1\ntest:#ff0000"
+# wallpaper: #008080
+
+
+# Problems to change values. Uncomment to force this values:
+# Dejavu Sans tiene problema entre l y I: Ievan levan
+gtk-font-name = "Dejavu Sans 14"
+gtk-icon-theme-name="retrosmart"
+
+include "test.rc"
+include "default.rc"
+include "progressbar.rc"
+include "range.rc"  # Si no incluye scrollbar muestra las scrollbar como range.
+include "scrollbar.rc"
+include "radio.rc"
+include "check.rc"
+include "entry.rc"
+include "chrome.rc"
+include "expander.rc"
+include "tooltip.rc"
+include "xfce.rc"
+#include "button.rc"
+#include "panel.rc"
+#include "combobox.rc"

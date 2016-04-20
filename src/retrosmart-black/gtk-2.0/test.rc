@@ -1,0 +1,27 @@
+
+style "test"
+{
+  fg[NORMAL]        = @test  # Texto normal.
+  fg[PRELIGHT]      = @test
+  fg[ACTIVE]        = @test # pestañas del fondo
+  fg[SELECTED]      = @test
+  fg[INSENSITIVE]   = @test
+  
+  bg[NORMAL]        = @test
+  bg[PRELIGHT]      = @test
+  bg[ACTIVE]        = @test  # Fondo de los widgets.
+  bg[SELECTED]      = @test  # Widget notificación mpd.
+  bg[INSENSITIVE]   = @test
+
+  base[NORMAL]      = @test # Fondo de iconos (Gestor de archivos)
+  base[PRELIGHT]    = @test # Fondo chek prelight
+  base[ACTIVE]      = @test # Selección en el fondo.
+  base[SELECTED]    = @test # Selección
+  base[INSENSITIVE] = @test
+
+  text[NORMAL]      = @test
+  text[PRELIGHT]    = @test
+  text[ACTIVE]      = @test
+  text[SELECTED]    = @test
+  text[INSENSITIVE] = @test
+}

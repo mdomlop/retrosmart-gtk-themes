@@ -1,0 +1,7 @@
+style "tooltips" = "default"
+{
+	bg[NORMAL] = "#ffcc00"
+	fg[NORMAL] = "#000000"
+}
+
+widget "gtk-tooltip*" style "tooltips"

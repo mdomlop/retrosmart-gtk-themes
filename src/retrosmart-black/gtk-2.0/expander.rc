@@ -1,0 +1,42 @@
+########################################################################
+# Expander
+########################################################################
+
+style "expander"
+{
+    GtkExpander::expander-size = 16
+    
+	engine "pixmap"
+	{
+	image
+	{
+	    function = EXPANDER
+	    expander_style = COLLAPSED
+	    file = "assets/plus.svg"
+	}
+
+	image
+	{
+            function            	= EXPANDER
+	    expander_style = EXPANDED
+	    file = "assets/minus.svg"
+	}
+
+	image
+	{
+	    function = EXPANDER
+	    expander_style = SEMI_EXPANDED
+	    file = "assets/minus-semi_expanded.svg"
+	}
+
+	image
+	{
+	    function = EXPANDER
+        expander_style = SEMI_COLLAPSED
+        file = "assets/plus-semi_collapsed.svg"
+	}
+	}
+}
+
+class "GtkExpander*" style "expander"
+

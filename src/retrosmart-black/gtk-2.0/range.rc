@@ -1,0 +1,120 @@
+########################################################################
+# Range
+########################################################################
+
+style "range"
+{	
+
+	GtkRange::slider-width		= 16
+
+  engine "pixmap" 
+  {
+    image 
+    {
+      function			= BOX
+      detail			= "trough"
+      file			= "assets/trough-horizontal.svg"
+      border			= { 19, 19, 5, 6 }
+      stretch			= TRUE
+        overlay_file = "assets/trough-horiz-mid.svg"
+        overlay_stretch = FALSE
+      orientation		= HORIZONTAL
+    }	
+    image 
+    {
+      function			= BOX
+      detail			= "trough"
+      file			= "assets/trough-vertical.svg"
+      border			= { 5, 6, 19, 19 }
+      stretch			= TRUE
+        overlay_file = "assets/trough-vert-mid.svg"
+        overlay_stretch = FALSE
+      orientation		= VERTICAL
+    }
+
+    # Horizontal
+
+    image 
+    {
+      function				= SLIDER
+      state           			= NORMAL
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-horiz.svg"
+      overlay_stretch			= FALSE
+      orientation			= HORIZONTAL
+    }
+    image 
+    {
+      function				= SLIDER
+      state           			= PRELIGHT
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-horiz-prelight.svg"
+      overlay_stretch			= FALSE
+      orientation			= HORIZONTAL
+    }
+    image 
+    {
+      function				= SLIDER
+      state           			= INSENSITIVE
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-horiz.svg"
+      overlay_stretch			= FALSE
+      orientation			= HORIZONTAL
+    }
+
+    # Vertical
+
+    image 
+    {
+      function				= SLIDER
+      state           			= NORMAL
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-vert.svg"
+      overlay_stretch			= FALSE
+      orientation			= VERTICAL
+    }
+    image 
+    {
+      function				= SLIDER
+      state           			= PRELIGHT
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-vert-prelight.svg"
+      overlay_stretch			= FALSE
+      orientation			= VERTICAL
+    }
+    image 
+    {
+      function				= SLIDER
+      state           			= INSENSITIVE
+      file				= "assets/null.svg"
+      border				= { 0, 0, 0, 0 }
+      stretch				= TRUE
+      overlay_file			= "assets/slider-vert.svg"
+      overlay_stretch			= FALSE
+      orientation			= VERTICAL
+    }
+
+    # Function below removes ugly boxes
+    image 
+    {
+       	function		= BOX
+	file        		= "assets/null.svg"
+	border      		= { 3, 3, 3, 3 }
+	stretch         	= TRUE
+    }
+
+  }
+}
+
+class "GtkRange" style "range"
+
