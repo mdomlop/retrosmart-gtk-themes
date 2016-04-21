@@ -1,21 +1,24 @@
 THEMENAME='retrosmart'
+SUFFIX='-gtk-themes'
+NAME=$(THEMENAME)$(SUFFIX)
 SRCDIR='src'
 OUTDIR='.'
 PREFIX='/usr'
 INSTALLDIR=$(PREFIX)'/share/themes'
 
-retrosmart-gtk-themes:
-	mkdir $(OUTDIR)'/retrosmart-gtk-themes' || exit 1
-	cp -r $(SRCDIR)/$(THEMENAME)-*/ $(OUTDIR)/$(THEMENAME)-gtk-themes/
+$(NAME): clean
+	mkdir $(OUTDIR)/$(NAME)
+	cp -r $(SRCDIR)/$(THEMENAME)-*/ $(OUTDIR)/$(NAME)/
 
-install: uninstall retrosmart-gtk-themes
-	cp -r $(OUTDIR)/$(THEMENAME)-gtk-themes/* $(INSTALLDIR)
+install: uninstall $(NAME)
+	mkdir -p $(INSTALLDIR)
+	cp -r $(OUTDIR)/$(NAME)/* $(INSTALLDIR)
 	chown -R root:root $(INSTALLDIR)/$(THEMENAME)-*/gtk-*/
 	chmod -R u=rwX,go=rX $(INSTALLDIR)/$(THEMENAME)-*/gtk-*/
 
 uninstall:
-	rm -Rf $(INSTALLDIR)/$(THEMENAME)-*/gtk-*/
+	rm -Rf $(INSTALLDIR)/$(THEMENAME)-gtk-*/
 
 clean:
-	rm -Rf $(OUTDIR)/$(THEMENAME)-gtk-themes
+	rm -Rf $(OUTDIR)/$(NAME)
 
