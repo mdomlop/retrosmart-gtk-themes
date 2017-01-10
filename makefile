@@ -10,7 +10,7 @@ $(NAME): clean
 	mkdir $(OUTDIR)/$(NAME)
 	cp -r $(SRCDIR)/$(THEMENAME)-*/ $(OUTDIR)/$(NAME)/
 
-install: install $(NAME)
+install: $(NAME)
 	mkdir -p $(INSTALLDIR)
 	cp -r $(OUTDIR)/$(NAME)/* $(INSTALLDIR)
 	chown -R root:root $(INSTALLDIR)/$(THEMENAME)-gtk-*/
@@ -24,3 +24,7 @@ clean:
 
 purge: clean uninstall
 
+togit:
+	git add .
+	git commit -m "Updated from makefile"
+	git push origin

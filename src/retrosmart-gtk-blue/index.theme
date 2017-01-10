@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=RetroSmart GTK Navy
+Comment=There is only one
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=retrosmart-gtk-navy
+MetacityTheme=retrosmart-gtk-navy
+IconTheme=retrosmart-icon-theme
+CursorTheme=retrosmart-x11-cursors
+ButtonLayout=close,minimize,maximize:

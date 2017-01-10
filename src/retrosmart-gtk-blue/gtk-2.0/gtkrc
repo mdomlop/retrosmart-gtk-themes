@@ -1,9 +1,10 @@
 # Retrosmart GTK Theme
 
-gtk-color-scheme = "light:#FFFFFF\ndark:#000000\nactive:#000000\ninactive:#999999\nbox:#d4d0c8\nedit:#ffffcc\ntest:#ff0000"
+gtk-color-scheme = "light:#FFFFFF\ndark:#000000\nactive:#0000ff\ninactive:#999999\nbox:#d4d0c8\nedit:#ffffcc\ntest:#ff0000"
 # wallpaper: #008080
 
 gtk-icon-sizes = "mini-commander-icon=32,32:print-manager=32,32:panel-button=32,32:gtk-dnd=32,32:gtk-menu=22,22:panel-menu=22,22:gtk-large-toolbar=28,28:gtk-small-toolbar=22,22:gtk-button=20,20:gtk-dialog=22,22"
+
 
 # Problems to change values. Uncomment to force this values:
 # Dejavu Sans tiene problema entre l y I: Ievan levan

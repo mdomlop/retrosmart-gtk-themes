@@ -1,6 +1,8 @@
 style "tooltips" = "default"
 {
-	bg[NORMAL] = "#ffcc00"
+	#bg[NORMAL] = "#ffcc00"  # Gold
+	bg[NORMAL] = "#ffffcc"  # Note
+	#bg[NORMAL] = "#ccffff"  # Sky
 	fg[NORMAL] = "#000000"
 }
 
