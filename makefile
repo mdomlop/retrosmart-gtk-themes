@@ -6,11 +6,11 @@ OUTDIR='.'
 PREFIX='/usr'
 INSTALLDIR=$(PREFIX)'/share/themes'
 
-$(NAME): clean
+$(NAME):
 	mkdir $(OUTDIR)/$(NAME)
 	cp -r $(SRCDIR)/$(THEMENAME)-*/ $(OUTDIR)/$(NAME)/
 
-install: $(NAME)
+install:
 	mkdir -p $(INSTALLDIR)
 	cp -r $(OUTDIR)/$(NAME)/* $(INSTALLDIR)
 	chown -R root:root $(INSTALLDIR)/$(THEMENAME)-gtk-*/
