@@ -1,4 +1,4 @@
-![retrosmart-preview](https://raw.githubusercontent.com/manueldl/retrosmart-gtk-themes/master/preview.png "Retrosmart look")
+![retrosmart-preview](https://raw.githubusercontent.com/mdomlop/retrosmart-gtk-themes/master/preview.png "Retrosmart look")
 
 Retrosmart gtk themes
 =====================
