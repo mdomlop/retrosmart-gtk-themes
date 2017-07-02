@@ -22,7 +22,7 @@ uninstall:
 	rm -rf $(PREFIX)/share/doc/$(NAME)/
 
 clean:
-	rm -rf $(NAME)-* /tmp/tmp.*.$(NAME)
+	rm -rf $(NAME)-* *.md /tmp/tmp.*.$(NAME)
 
 purge: clean
 	rm -f *.md makefile
