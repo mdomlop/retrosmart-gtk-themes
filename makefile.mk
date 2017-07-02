@@ -28,7 +28,7 @@ purge: clean
 	rm -f *.md makefile
 	@echo makefile deleted. Execute configure script to generate it again.
 
-togit: purge doc
+togit: purge doc update-preview
 	git add .
 	git commit -m 'Updated from makefile'
 	git push origin

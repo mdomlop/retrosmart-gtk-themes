@@ -1,3 +1,5 @@
+![retrosmart-preview](https://raw.githubusercontent.com/mdomlop/retrosmart-gtk-themes/master/preview.png "Retrosmart look")
+
 Retrosmart GTK themes
 =====================
 
